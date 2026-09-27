@@ -38,7 +38,7 @@ def flag_large_withdrawals(withdrawals, threshold=FLAG_THRESHOLD_KWD):
     """
     flagged = []
     for w in withdrawals:
-        if w["amount_kwd"] > threshold:
+        if w["amount_kwd"] >= threshold:
             flagged.append(w)
     return flagged
 
